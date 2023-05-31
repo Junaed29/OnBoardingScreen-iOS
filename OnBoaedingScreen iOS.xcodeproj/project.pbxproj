@@ -11,6 +11,9 @@
 		E4E12D002A248D3F00D602B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E12CFF2A248D3F00D602B5 /* ContentView.swift */; };
 		E4E12D022A248D4100D602B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4E12D012A248D4100D602B5 /* Assets.xcassets */; };
 		E4E12D052A248D4100D602B5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4E12D042A248D4100D602B5 /* Preview Assets.xcassets */; };
+		E4E12D0C2A24AEE800D602B5 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E12D0B2A24AEE800D602B5 /* ProfileView.swift */; };
+		E4E12D0E2A24AF0300D602B5 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E12D0D2A24AF0300D602B5 /* OnBoardingView.swift */; };
+		E4E12D112A2507DF00D602B5 /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = E4E12D102A2507DF00D602B5 /* Defaults */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,8 @@
 		E4E12CFF2A248D3F00D602B5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E4E12D012A248D4100D602B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4E12D042A248D4100D602B5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E4E12D0B2A24AEE800D602B5 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		E4E12D0D2A24AF0300D602B5 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4E12D112A2507DF00D602B5 /* Defaults in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +59,8 @@
 			children = (
 				E4E12CFD2A248D3F00D602B5 /* OnBoaedingScreen_iOSApp.swift */,
 				E4E12CFF2A248D3F00D602B5 /* ContentView.swift */,
+				E4E12D0B2A24AEE800D602B5 /* ProfileView.swift */,
+				E4E12D0D2A24AF0300D602B5 /* OnBoardingView.swift */,
 				E4E12D012A248D4100D602B5 /* Assets.xcassets */,
 				E4E12D032A248D4100D602B5 /* Preview Content */,
 			);
@@ -83,6 +91,9 @@
 			dependencies = (
 			);
 			name = "OnBoaedingScreen iOS";
+			packageProductDependencies = (
+				E4E12D102A2507DF00D602B5 /* Defaults */,
+			);
 			productName = "OnBoaedingScreen iOS";
 			productReference = E4E12CFA2A248D3F00D602B5 /* OnBoaedingScreen iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,9 @@
 				Base,
 			);
 			mainGroup = E4E12CF12A248D3F00D602B5;
+			packageReferences = (
+				E4E12D0F2A2507DF00D602B5 /* XCRemoteSwiftPackageReference "Defaults" */,
+			);
 			productRefGroup = E4E12CFB2A248D3F00D602B5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,6 +152,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4E12D002A248D3F00D602B5 /* ContentView.swift in Sources */,
+				E4E12D0E2A24AF0300D602B5 /* OnBoardingView.swift in Sources */,
+				E4E12D0C2A24AEE800D602B5 /* ProfileView.swift in Sources */,
 				E4E12CFE2A248D3F00D602B5 /* OnBoaedingScreen_iOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,8 +289,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -282,9 +298,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.junaed.OnBoaedingScreen-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -302,8 +321,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,9 +330,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.junaed.OnBoaedingScreen-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -339,6 +361,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E4E12D0F2A2507DF00D602B5 /* XCRemoteSwiftPackageReference "Defaults" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/Defaults";
+			requirement = {
+				kind = revision;
+				revision = 8584d1d6ed36c195258977f2ed0cf95357efb160;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E4E12D102A2507DF00D602B5 /* Defaults */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E4E12D0F2A2507DF00D602B5 /* XCRemoteSwiftPackageReference "Defaults" */;
+			productName = Defaults;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E4E12CF22A248D3F00D602B5 /* Project object */;
 }
