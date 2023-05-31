@@ -15,30 +15,39 @@ struct ProfileView: View {
     @AppStorage("SIGNED_IN") var currentUserSignedIn : Bool = false
     
     var body: some View {
-        VStack {
-            Image(systemName: "person.circle.fill")
-                .resizable()
-                .frame(width: 150, height: 150)
-                .scaledToFit()
-            Text(currentUserName ?? "Your Name")
-            Text("The user is \(currentUserAge ?? 0) years old")
-            Text("Their gender is \(currentUserGender ?? "Unknown")")
-            
-            Button("SIGN OUT") {
-                signOut()
+        NavigationStack{
+            ZStack{
+                globalBg
+                
+                VStack {
+                    Image(systemName: "person.circle.fill")
+                        .resizable()
+                        .frame(width: 150, height: 150)
+                        .scaledToFit()
+                    Text(currentUserName ?? "Your Name")
+                    Text("The user is \(currentUserAge ?? 0) years old")
+                    Text("Their gender is \(currentUserGender ?? "Unknown")")
+                    
+                    Button("SIGN OUT") {
+                        signOut()
+                    }
+                    .padding(.top)
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .buttonStyle(.borderedProminent)
+                }
+                .font(.title)
+                .foregroundColor(.purple)
+                .padding()
+                .padding(.vertical, 40)
+                .background(.white)
+                .cornerRadius(10)
+                .shadow(radius: 10)
+                .navigationTitle("Profile")
+                .navigationBarTitleDisplayMode(.inline)
+                //.toolbar(.hidden, for: .navigationBar)
             }
-            .padding(.top)
-            .font(.headline)
-            .foregroundColor(.white)
-            .buttonStyle(.borderedProminent)
         }
-        .font(.title)
-        .foregroundColor(.purple)
-        .padding()
-        .padding(.vertical, 40)
-        .background(.white)
-        .cornerRadius(10)
-        .shadow(radius: 10)
     }
     
     func signOut(){

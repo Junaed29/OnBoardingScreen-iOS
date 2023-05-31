@@ -39,33 +39,39 @@ struct OnBoardingView: View {
     @AppStorage("SIGNED_IN") var currentUserSignedIn : Bool = false
     
     var body: some View {
-        ZStack {
-            
+        NavigationStack{
             ZStack {
-                switch onBoardingState{
-                case 0:
-                    welcomeScrtion.transition(transition)
-                case 1:
-                    addNameSection.transition(transition)
-                case 2:
-                    addAgeSection.transition(transition)
-                case 3:
-                    addGenderSection.transition(transition)
-                    
-                    
-                default:
-                    Text("")
+                globalBg
+                
+                ZStack {
+                    switch onBoardingState{
+                    case 0:
+                        welcomeScrtion.transition(transition)
+                    case 1:
+                        addNameSection.transition(transition)
+                    case 2:
+                        addAgeSection.transition(transition)
+                    case 3:
+                        addGenderSection.transition(transition)
+                        
+                        
+                    default:
+                        Text("")
+                    }
                 }
+                
+                
+                VStack {
+                    Spacer()
+                    bottomButton
+                }.padding()
             }
-            
-            
-            VStack {
-                Spacer()
-                bottomButton
-            }.padding()
-        }
-        .alert(isPresented: $showAlert) {
-            Alert(title: Text(alertTitle))
+            .alert(isPresented: $showAlert) {
+                Alert(title: Text(alertTitle))
+            }
+            .navigationTitle("Find Your Match")
+            .navigationBarTitleDisplayMode(.inline)
+            //.toolbar(.hidden, for: .navigationBar)
         }
     }
     
@@ -73,7 +79,7 @@ struct OnBoardingView: View {
 
 struct OnBoardingView_Previews: PreviewProvider {
     static var previews: some View {
-        OnBoardingView().background(Color.purple)
+        OnBoardingView()
     }
 }
 
